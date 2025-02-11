@@ -1,19 +1,20 @@
 {
- 	inputs,
-	nixpkgs,
-	self,
-	username,
-	hosts,
-	...
+  inputs,
+  nixpkgs,
+  self,
+  username,
+  hosts,
+  ...
 }:
 {
-	imports = [
-		./env.nix
-		./font.nix
-		./hyprland.nix
-		./network.nix
-		./nix.nix
-		./program.nix
-		./user.nix
-	];
+  imports = [
+    ./env.nix
+    ./font.nix
+    ./hyprland.nix
+    ./network.nix
+    ./nix.nix
+    ./program.nix
+    ./ssh.nix
+    ./user.nix
+  ];
 }

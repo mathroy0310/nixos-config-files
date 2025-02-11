@@ -6,10 +6,18 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
-        modules-left = ["hyprland/workspaces"];
-        modules-center = ["hyprland/window"];
-        modules-right = ["custom/weather" "pulseaudio" "battery" "clock" "tray"];
+        height = 28;
+        modules-left = [
+          "custom/launcher"
+          "hyprland/workspaces"
+        ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [
+          "custom/weather"
+          "pulseaudio"
+          "battery"
+          "clock"
+        ];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -17,16 +25,8 @@
           all-outputs = false;
           format = "{icon}";
           format-icons = {
-            "1" = "1";
-            "2" = "2";
-            "3" = "3";
-            "4" = "4";
-            "5" = "5";
-            "6" = "6";
-            "7" = "7";
-            "8" = "8";
-            "9" = "9";
-            "magic" = "";
+            "default" = "";
+            "active" = "";
           };
 
           persistent-workspaces = {
@@ -52,7 +52,10 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" ""];
+            "default" = [
+              ""
+              ""
+            ];
           };
           on-click = "pavucontrol";
         };
@@ -65,17 +68,26 @@
           format = "{icon} {capacity}%";
           format-charging = " {capacity}%";
           format-alt = "{time} {icon}";
-          format-icons = ["" "" "" "" ""];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+        };
+
+        "custom/launcher" = {
+          format = "{icon}";
+          format-icons = {
+            "default" = "";
+          };
+          on-click = "wofi --show drun";
         };
 
         "clock" = {
-          format = "{:%d.%m.%Y - %H:%M}";
-          format-alt = "{:%A, %B %d at %R}";
-        };
-
-        "tray" = {
-          icon-size = 14;
-          spacing = 1;
+          format = " {:%H:%M}";
+          format-alt = " {:%m-%d-%Y}";
         };
       };
     };

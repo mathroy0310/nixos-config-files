@@ -1,72 +1,88 @@
 * {
   border: none;
-  border-radius: 0px;
+  border-radius: 6px;
   font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
+  font-weight: 500;
   font-size: 10px;
-  min-height: 0;
-  color: #ebdbb2;
+  min-height: 16px;
+  margin: 2px 3px 2px 3px;
 }
 
 window#waybar {
-  background: #1d2021;
+  background-color: transparent;
 }
 
-/* Workspace Buttons */
-#workspaces button label {
-  color: #ebdbb2;
-  padding: 0 10px;
+tooltip {
+  background-color: #282828;
+  border: 1px solid #3c3836;
 }
 
-#workspaces button.active label {
-  color: #1d2021;
+window#waybar>box {
+  margin: initial;
+  margin-bottom: 2px;
+  background-color: rgba(40, 40, 40, 0.9);
+  box-shadow: 0px 0px 2px 2px rgba(32, 32, 32, 1);
 }
 
-#workspaces button.active {
-  background: #d65d0e;
-}
-
+#custom-launcher,
+#custom-weather,
+#workspaces,
 #clock,
 #battery,
 #pulseaudio,
-#tray,
 #weather {
-  padding: 0 10px;
-  margin: 0 10px;
+  background-color: #282828;
+  border: 2px solid #3c3836;
+  box-shadow: 0px 0px 2px 2px rgba(32, 32, 32, 1);
+  color: #ebdbb2;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: ease 0.15s;
 }
 
-#custom-weather {
-  margin: 0;
-  color: #98971a;
-  border-bottom: 5px solid #98971a
-}
-
-#pulseaudio {
-  margin: 0;
-  color: #689d6a;
-  border-bottom: 5px solid #689d6a;
-}
-
-#pulseaudio.muted {
-  padding: 0 20px;
-  color: #cc241d;
-  border-bottom: 5px solid #cc241d;
-}
-
-#battery {
-  margin: 0;
-  color: #458588;
-  border-bottom: 5px solid #458588;
-}
-
-#clock {
-  margin: 0;
-  color: #b16286;
-  border-bottom: 5px solid #b16286;
-}
-
-#tray {
-  margin: 0;
+#workspaces button:hover,
+#workspaces button.active:hover,
+#workspaces button.empty:hover,
+#custom-launcher:hover,
+#custom-weather:hover,
+#workspaces:hover,
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#weather:hover {
   color: #d65d0e;
-  border-bottom: 5px solid #d65d0e;
+  box-shadow: 0px 0px 4px 2px rgba(32, 32, 32, 1);
+  transition: ease 0.2s;
+}
+
+#workspaces button:hover,
+#workspaces button.active:hover,
+#workspaces button.empty:hover {
+  margin: initial;
+  box-shadow: initial;
+}
+
+#custom-launcher {
+  padding-right: 20px;
+  padding-left: 14px;
+  font-size: 20px;
+  color: #458588;
+  font-weight: 600;
+}
+
+#workspaces {
+  padding: initial;
+}
+
+#workspaces button {
+  margin: initial;
+  padding: initial;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #665c54;
+}
+
+#workspaces button.active,
+#workspaces button.empty {
+  color: #ebdbb2;
 }

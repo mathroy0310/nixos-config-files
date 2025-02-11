@@ -1,20 +1,21 @@
 {
-	imports = [
-		./discord
-		./waybar
-		./wofi
-		./bat.nix
-		./browser.nix
-		./eza.nix
-		./fish.nix
-		./foot.nix
-		./git.nix
-		./hyprland.nix
-		./lazygit.nix
-		./packages.nix
-		./ranger.nix
-		./spicetify.nix
-		./starship.nix
-		./vscodium.nix
-	];
+  imports = [
+    ./discord
+    ./waybar
+    ./wofi
+    ./bat.nix
+    ./browser.nix
+    ./eza.nix
+    ./fish.nix
+    ./foot.nix
+    ./git.nix
+    ./gtk.nix
+    ./hyprland.nix
+    ./lazygit.nix
+    ./packages.nix
+    ./ranger.nix
+    ./spicetify.nix
+    ./starship.nix
+    ./vscodium.nix
+  ];
 }

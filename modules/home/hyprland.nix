@@ -23,7 +23,7 @@
         "XDG_SCREENSHOTS_DIR,$HOME/Pictures/Screenshots"
       ];
 
-      monitor = ",1600x900@60, auto, 1";
+      monitor = ",1920x1080@144, auto, 1";
 
       "$mainMod" = "SUPER";
       "$terminal" = "foot";
@@ -34,7 +34,8 @@
       exec-once = [
         "swww init"
         "swww img ~/Wallpapers/gruvbox/Background1.png"
-        "waybar"
+        "waybar &"
+        "hyprctl setcursor Bibata-Modern-Ice 9 &"
       ];
 
       general = {
@@ -79,8 +80,7 @@
       };
 
       input = {
-        kb_layout = "fr,en";
-        kb_variant = "ca, ";
+        kb_layout = "ca, en";
         kb_options = "grp:win_space_toggle";
       };
 
