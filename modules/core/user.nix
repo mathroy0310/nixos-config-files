@@ -19,6 +19,7 @@
       programs.home-manager.enable = true;
     };
   };
+  users.defaultUserShell = pkgs.fish;
 
   users.users.${username} = {
     isNormalUser = true;

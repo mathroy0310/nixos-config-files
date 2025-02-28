@@ -8,7 +8,6 @@
       pull.rebase = true;
       commit.gpgsign = true;
       gpg.format = "ssh";
-      gpgsign = true;
       user.signingKey = "~/.ssh/id_e25519_sign.pub";
     };
     ignores = [

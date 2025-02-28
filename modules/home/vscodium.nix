@@ -1,15 +1,13 @@
 { pkgs, ... }:
 let
-  jonathanharty.gruvbox-material-icon-theme =
-    pkgs.vscode-utils.buildVscodeMarketplaceExtension
-      {
-        mktplcRef = {
-          name = "gruvbox-material-icon-theme";
-          publisher = "JonathanHarty";
-          version = "1.1.5";
-          hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
-        };
-      };
+  jonathanharty.gruvbox-material-icon-theme = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "gruvbox-material-icon-theme";
+      publisher = "JonathanHarty";
+      version = "1.1.5";
+      hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
+    };
+  };
 in
 {
   programs.vscode = {
@@ -61,7 +59,7 @@ in
       "workbench.editor.limit.value" = 10;
       "workbench.editor.limit.perEditorGroup" = true;
       "workbench.editor.showTabs" = "single";
-      "files.autoSave" = "onWindowChange";
+      "files.autoSave" = "afterDelay";
       "explorer.openEditors.visible" = 0;
       "breadcrumbs.enabled" = false;
       "editor.renderControlCharacters" = false;
@@ -101,7 +99,8 @@ in
       "C_Cpp.doxygen.generatedStyle" = "/**";
 
       # Zig
-      "zig.initialSetupDone" = true;
+      "zig.zls.enable" = "on";
+      #"zig.initialSetupDone" = true;
       "zig.checkForUpdate" = false;
       "zig.zls.path" = "zls";
       "zig.path" = "zig";

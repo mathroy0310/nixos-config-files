@@ -10,13 +10,16 @@
     nixfmt-rfc-style # nixformater
 
     # C / C++
+    glibc
+    
     clang-tools
-    gcc
+    gcc_multi
     gdb
     gnumake
 
     # zig
     inputs.zig.packages."${system}".master
+    # zig
     zls
   ];
 }
