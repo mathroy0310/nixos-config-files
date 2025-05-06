@@ -80,7 +80,7 @@
       };
 
       input = {
-        kb_layout = "ca, en";
+        kb_layout = "en";
         kb_options = "grp:win_space_toggle";
       };
 

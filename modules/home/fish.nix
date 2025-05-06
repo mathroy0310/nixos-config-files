@@ -6,7 +6,7 @@
       set fish_greeting
 
       eval (ssh-agent -c) > /dev/null
-      ssh-add ~/.ssh/id_e25519_sign
+      ssh-add ~/.ssh/id_e25519_sign > /dev/null
     '';
     shellAliases = {
       c = "clear";

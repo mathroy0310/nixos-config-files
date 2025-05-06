@@ -1,4 +1,5 @@
+{ pkgs }:
 {
 	programs.fish.enable = true;
-	programs.firefox.enable = true;
+	environment.systemPackages = with pkgs; [ brave ];
 }
