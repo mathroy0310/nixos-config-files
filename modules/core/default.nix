@@ -1,0 +1,37 @@
+{
+  inputs,
+  nixpkgs,
+  self,
+  username,
+  host,
+  ...
+}:
+{
+  imports =
+    if (host == "desktop") then
+      [
+        ./env.nix
+        ./font.nix
+        ./hyprland.nix
+        ./lvm.nix
+        ./network.nix
+        ./nix.nix
+        ./opengl.nix
+        ./program.nix
+        ./ssh.nix
+        ./nvidia.nix
+        ./steam.nix
+        ./user.nix
+      ]
+    else
+      [
+        ./env.nix
+        ./font.nix
+        ./hyprland.nix
+        ./network.nix
+        ./nix.nix
+        ./program.nix
+        ./ssh.nix
+        ./user.nix
+      ];
+}
