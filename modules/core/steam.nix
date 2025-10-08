@@ -51,4 +51,11 @@
     protonup-qt
   ];
 
+  # PS5 DualSense
+  # disable touchpad acting as a mouse
+  # might need to  sudo udevadm control --reload-rules; sudo udevadm trigger
+  services.udev.extraRules = ''
+    # Disable DualSense Touchpad
+    ACTION=="add|change", SUBSYSTEM=="input", ATTRS{name}=="Sony Interactive Entertainment DualSense Wireless Controller Touchpad", ENV{ID_INPUT}="0", ENV{ID_INPUT_TOUCHPAD}="0"
+  '';
 }

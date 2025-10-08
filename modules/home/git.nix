@@ -8,7 +8,7 @@
       pull.rebase = true;
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingKey = "~/.ssh/id_e25519_sign.pub";
+      user.signingKey = "~/.ssh/id_e25519.pub";
     };
     ignores = [
       "*.swp"

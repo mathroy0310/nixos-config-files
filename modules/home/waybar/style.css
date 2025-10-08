@@ -26,6 +26,7 @@ window#waybar>box {
 
 #custom-launcher,
 #custom-weather,
+#network,
 #workspaces,
 #clock,
 #battery,
@@ -45,6 +46,7 @@ window#waybar>box {
 #workspaces button.empty:hover,
 #custom-launcher:hover,
 #custom-weather:hover,
+#netwrok:hover
 #workspaces:hover,
 #clock:hover,
 #battery:hover,

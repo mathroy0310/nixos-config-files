@@ -19,6 +19,7 @@
         queueTime
         hidePodcasts
         shuffle
+        fullAppDisplay
       ];
     };
 }

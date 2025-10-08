@@ -15,6 +15,7 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "custom/weather"
+          "network"
           "pulseaudio"
           "battery"
           "clock"
@@ -61,17 +62,20 @@
           class = "weather";
         };
 
+        "network" = {
+          format-wifi = " {essid} ({signalStrength}%)";
+          format-ethernet = " {ipaddr}";
+          format-disconnected = "⚠ No Network";
+          tooltip-format = "{ifname} via {gwaddr}  {essid} {signalStrength}%";
+          interval = 10;
+        };
+
         "pulseaudio" = {
           format = "{icon} {volume}%";
           format-bluetooth = "{icon} {volume}% ";
           format-muted = "";
           format-icons = {
             "headphones" = "";
-            "handsfree" = "";
-            "headset" = "";
-            "phone" = "";
-            "portable" = "";
-            "car" = "";
             "default" = [
               ""
               ""

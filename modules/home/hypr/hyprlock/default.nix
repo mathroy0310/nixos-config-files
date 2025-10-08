@@ -24,7 +24,7 @@
 
       background = [
         {
-          path = "${../../../../wallpapers/starry-sky.png}";
+          path = "${../../../../assets/wallpaper.png}";
           blur_passes = 2;
           contrast = 0.8916;
           brightness = 0.8172;
@@ -35,7 +35,7 @@
 
       input-field = [
         {
-          monitor = "";
+          monitor = "DP-3";
           size = "230, 50";
           outline_thickness = "4";
           dots_size = "0.2"; # Scale of input-field height, 0.2 - 0.8
@@ -58,9 +58,8 @@
 
     
       label = [
-          # clock
         {
-          monitor = "";
+          monitor = "DP-3";
           text = "$TIME";
           color = "rgba(235, 219, 178, 0.9)";
           font_size = 50;
@@ -72,35 +71,7 @@
           valign = "top";
           zindex = "3";
         }
-        # User
-        {
-          monitor = "";
-          text = "  $USER";
-          shadow_passes = "1";
-          shadow_boost = "0.5";
-          color = "rgba(235, 219, 178, 1)";
-          font_size = 14;
-          font_family = "JetBrainsMono Nerd Font";
-          position = "0, -38";
-          halign = "center";
-          valign = "bottom";
-          zindex = "2";
-      }
       ];
-
-      # avatar
-      image = {
-          monitor = "";
-          path = "./avatar.png";
-          size = "100";
-          rounding = "-1";
-          border_size = "3";
-          border_color = "rgba(235, 219, 178, 0.9)";
-          position = "0, 45";
-          halign = "center";
-          valign = "center";
-          zindex = "3";
-      };
     };
   };
 }

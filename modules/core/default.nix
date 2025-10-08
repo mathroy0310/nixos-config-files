@@ -10,16 +10,17 @@
   imports =
     if (host == "desktop") then
       [
+        ./docker.nix
         ./env.nix
         ./font.nix
         ./hyprland.nix
         ./lvm.nix
+        ./minecraft-server.nix
         ./network.nix
         ./nix.nix
-        ./opengl.nix
         ./program.nix
         ./ssh.nix
-        ./nvidia.nix
+        ./graphics.nix
         ./steam.nix
         ./user.nix
       ]

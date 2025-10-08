@@ -7,9 +7,20 @@
     "nvidia_drm"
   ];
   services.xserver.videoDrivers = [ "nvidia" ];
+  
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;  # For 32-bit games
+    extraPackages = with pkgs; [
+      mesa
+      libGL
+      vaapiVdpau
+      libvdpau-va-gl
+      glxinfo
+      vulkan-tools
+    ];
   };
+  
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
@@ -17,8 +28,4 @@
     nvidiaSettings = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    vulkan-tools
-    mesa
-  ];
 }

@@ -9,6 +9,9 @@
     nixd # lsp
     nixfmt-rfc-style # nixformater
 
+    # dbg
+    lldb
+
     # C / C++
     glibc
     

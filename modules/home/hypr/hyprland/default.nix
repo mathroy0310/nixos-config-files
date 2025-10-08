@@ -26,6 +26,7 @@
         "WLR_BACKEND,vulkan"
         "WLR_RENDERER,vulkan"
         "WLR_NO_HARDWARE_CURSORS,1"
+        "XDG_RUNTIME_DIR,$"
         "XDG_SCREENSHOTS_DIR,$HOME/Pictures/Screenshots"
       ];
 
@@ -62,16 +63,18 @@
       "$mainMod" = "SUPER";
       "$terminal" = "foot";
       "$fileManager" = "nemo";
-      "$menu" = "rofi -show drun || pkill rofi";
+      "$notificationCenter" = "swaync-client -t -sw";
+      "$menu" = "rofi -modi drun -show drun || pkill rofi";
       "$browser" = "zen";
+      "$bookManager" = "bash -x ${./scripts/book_manager.sh}";
 
       exec-once = [
         "swww init"
-        "swww img ~/Pictures/wallpapers/wallpaper.png"
+        "swww img ${../../../../assets/wallpaper.png}"
         "hypridle"
         "swaync"
         "hyprctl setcursor Bibata-Modern-Ice 9 &"
-        "waybar &"
+        "sleep 1 && waybar &"
       ];
 
       general = {
@@ -90,10 +93,6 @@
       };
 
       decoration = {
-        rounding = 0;
-
-        active_opacity = 1.0;
-        inactive_opacity = 1.0;
 
         blur = {
           enabled = false;
@@ -179,9 +178,6 @@
       xwayland.force_zero_scaling = true;
 
       windowrule = [
-        "float, ^(imv)$"
-        "float, ^(mpv)$"
-
         "pin,class:^(rofi)$"
 
         "float, title:^(Picture-in-Picture)$"
@@ -195,10 +191,12 @@
 
         # keybindings
         "$mainMod, S, exec, spotify"
+        "$mainMod, O, exec, obitisian"
         "$mainMod, Z, exec, $browser"
         "$mainMod, Q, exec, $terminal"
-        "$mainMod CTRL, B, exec, ~/.config/rofi/scripts/book.sh"
-        "$mainMod, C, killactive,"
+        "$mainMod, B, exec, $bookManager"
+        "$mainMod, N, exec, $notificationCenter"
+        "$mainMod CTRL, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, F, fullscreen"
@@ -253,9 +251,6 @@
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-
-        # Scripts
-        "$mainMod CTRL, A, exec, ~/.config/hypr/scripts/toggle_focus_mode.sh"
 
         # Volume and Media Control
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "

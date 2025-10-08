@@ -30,7 +30,6 @@
       script-fail-notify = true;
       widgets = [
         "title"
-        "dnd"
         "notifications"
         "mpris"
         "volume"
@@ -42,9 +41,6 @@
           clear-all-button = true;
           button-text = "󰆴 Clear All";
         };
-        dnd = {
-          text = "Do Not Disturb";
-        };
         label = {
           max-lines = 1;
           text = "Notification Center";
@@ -55,7 +51,7 @@
         };
         volume = {
           label = "󰕾";
-          show-per-app = true;
+          show-per-app = false;
         };
         buttons-grid = {
           actions = [
@@ -72,10 +68,6 @@
               command = "hyprlock";
             }
             {
-              label = "󰍃";
-              command = "hyprctl dispatch exit";
-            }
-            {
               label = "󰤄";
               command = "systemctl suspend";
             }
@@ -86,18 +78,6 @@
             {
               label = "󰍬";
               command = "swayosd-client --input-volume mute-toggle";
-            }
-            {
-              label = "󰖩";
-              command = "nm-connection-editor";
-            }
-            {
-              label = "󰂯";
-              command = "blueman-manager";
-            }
-            {
-              label = "";
-              command = "obs";
             }
           ];
         };

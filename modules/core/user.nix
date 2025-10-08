@@ -28,6 +28,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "user"
     ];
     shell = pkgs.fish;
   };

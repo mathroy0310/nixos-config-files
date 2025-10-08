@@ -6,6 +6,7 @@
   imports =
     if (host == "desktop") then
       [
+        ./beeper.nix
         ./discord
         ./fastfetch
         ./hypr
@@ -26,7 +27,6 @@
         ./packages.nix
         ./ranger.nix
         ./spicetify.nix
-        ./steam.nix
         ./starship.nix
         ./swaylock.nix
         ./vscodium.nix
